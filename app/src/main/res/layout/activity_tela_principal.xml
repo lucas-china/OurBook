@@ -8,18 +8,54 @@
     android:orientation="vertical"
     tools:context="br.ufpi.es.ourbook.visao.TelaPrincipal">
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewNome"
-        android:layout_marginTop="20dp"
-        android:textSize="20dp"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bem Vindo, Nome"
+            android:textSize="16sp"/>
+
+
+
+    </LinearLayout>
+
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewEmail"
-        android:layout_marginTop="20dp"
-        android:textSize="20dp"/>
+        android:layout_height="90dp"
+        android:text="Ver Estante"
+        android:onClick="verEstante"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Cadastrar Livros"
+        android:onClick="cadastarLivro"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Buscar Livro"
+        android:onClick="buscarLivro"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Configurações"
+        android:onClick="configuracoes"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Sobre"
+        android:onClick="sobre"/>
 
 </LinearLayout>

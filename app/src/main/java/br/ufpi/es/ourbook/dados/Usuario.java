@@ -11,6 +11,7 @@ public class Usuario {
     private String senha;
     private String sexo;
     private String endereco;
+    private Livro[] livros;
 
 
 
@@ -52,5 +53,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Livro[] getLivros() {
+        return livros;
+    }
+
+    public void setLivros(Livro[] livros) {
+        this.livros = livros;
     }
 }
