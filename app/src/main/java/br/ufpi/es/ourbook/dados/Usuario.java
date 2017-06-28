@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Lucas Brito on 22/06/2017.
+ * Created by Lucas Brito on 22/06/2017 _.
  */
 
 public class Usuario implements Serializable{

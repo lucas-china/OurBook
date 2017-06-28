@@ -7,7 +7,7 @@ import br.ufpi.es.ourbook.dados.Usuario;
 import br.ufpi.es.ourbook.controle.ControleLivro;
 
 /**
- * Created by Lucas Brito on 23/06/2017.
+ * Created by Lucas Brito on 23/06/2017 _.
  */
 
 public class ControleUsuario {
