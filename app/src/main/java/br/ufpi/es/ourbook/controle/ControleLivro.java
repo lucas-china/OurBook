@@ -1,5 +1,8 @@
 package br.ufpi.es.ourbook.controle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.ufpi.es.ourbook.dados.Livro;
 import br.ufpi.es.ourbook.dados.Usuario;
 
@@ -8,52 +11,63 @@ import br.ufpi.es.ourbook.dados.Usuario;
  */
 
 public class ControleLivro {
-    private Livro[] livros = new Livro[3];
 
-    public Livro[] listarLivros(String email){
-
-        if (email.equals("lucasbrito@gmail.com")){
-            Livro livro1 = new Livro("Harry Potter", "J. K. Rowling", "Infantojuvenil");
-            Livro livro2 = new Livro("Senhor dos Aneis", "J. R. R. Tolkien", "Literatura Fantastica");
-            Livro livro3 = new Livro("As Cronicas de Gelo e Fogo", "George R. R. Martin", "Fantasia Epica");
-
-            livros[0] = livro1;
-            livros[1] = livro2;
-            livros[2] = livro3;
+    private List<Livro> livros = new ArrayList<>();
 
 
-        } else if (email.equals("luciaemilia@gmail.com")) {
-            Livro livro1 = new Livro("Dom Casmurro", "Machado de Assis", "Romance Brasileiro");
-            Livro livro2 = new Livro("P.S Eu te Amo", "Cecelia Ahern", "Romance");
-            Livro livro3 = new Livro("Depois daquela Viagem", "Valéria Piassa Polizzi", "Drama");
 
-            livros[0] = livro1;
-            livros[1] = livro2;
-            livros[2] = livro3;
+    public void cadastrarLivro(Livro livro, Usuario usuario){
+        usuario.adicionarLivro(livro);
+    }
 
-        } else if (email.equals("paulaandrade@gmail.com")) {
-            Livro livro1 = new Livro("Dom Casmurro", "Machado de Assis", "Romance Brasileiro");
-            Livro livro2 = new Livro("P.S Eu te Amo", "Cecelia Ahern", "Romance");
-            Livro livro3 = new Livro("Depois daquela Viagem", "Valéria Piassa Polizzi", "Drama");
+    public List<Livro> listarLivros(Usuario usuario){
+        return usuario.getLivros();
+    }
 
-            livros[0] = livro1;
-            livros[1] = livro2;
-            livros[2] = livro3;
+    public void startaLivros(Usuario usuario){
+        Livro livro1, livro2, livro3;
 
-        } else if (email.equals("marcio@gmail.com")) {
-            Livro livro1 = new Livro("Dom Casmurro", "Machado de Assis", "Romance Brasileiro");
-            Livro livro2 = new Livro("P.S Eu te Amo", "Cecelia Ahern", "Romance");
-            Livro livro3 = new Livro("Depois daquela Viagem", "Valéria Piassa Polizzi", "Drama");
+        if (usuario.getEmail().equals("lucasbrito@gmail.com")){
+            livro1 = new Livro("Harry Potter", "J. K. Rowling", "Infantojuvenil");
+            livro2 = new Livro("Senhor dos Aneis", "J. R. R. Tolkien", "Literatura Fantastica");
+            livro3 = new Livro("As Cronicas de Gelo e Fogo", "George R. R. Martin", "Fantasia Epica");
 
-            livros[0] = livro1;
-            livros[1] = livro2;
-            livros[2] = livro3;
+            livros.add(livro1);
+            livros.add(livro2);
+            livros.add(livro3);
+
+        } else if (usuario.getEmail().equals("luciaemilia@gmail.com")) {
+            livro1 = new Livro("Dom Casmurro", "Machado de Assis", "Romance Brasileiro");
+            livro2 = new Livro("P.S Eu te Amo", "Cecelia Ahern", "Romance");
+            livro3 = new Livro("Depois daquela Viagem", "Valéria Piassa Polizzi", "Drama");
+
+            livros.add(livro1);
+            livros.add(livro2);
+            livros.add(livro3);
+
+        } else if (usuario.getEmail().equals("paulaandrade@gmail.com")) {
+            livro1 = new Livro("Dom Casmurro", "Machado de Assis", "Romance Brasileiro");
+            livro2 = new Livro("P.S Eu te Amo", "Cecelia Ahern", "Romance");
+            livro3 = new Livro("Depois daquela Viagem", "Valéria Piassa Polizzi", "Drama");
+
+            livros.add(livro1);
+            livros.add(livro2);
+            livros.add(livro3);
+
+        } else if (usuario.getEmail().equals("marcio@gmail.com")) {
+            livro1 = new Livro("Dom Casmurro", "Machado de Assis", "Romance Brasileiro");
+            livro2 = new Livro("P.S Eu te Amo", "Cecelia Ahern", "Romance");
+            livro3 = new Livro("Depois daquela Viagem", "Valéria Piassa Polizzi", "Drama");
+
+            livros.add(livro1);
+            livros.add(livro2);
+            livros.add(livro3);
         }
         else{
             System.out.println("Usuario não existe");
         }
 
-        return livros;
+        usuario.setLivros(livros);
     }
 
 }

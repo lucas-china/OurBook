@@ -1,5 +1,7 @@
 package br.ufpi.es.ourbook.controle;
 
+import java.util.List;
+
 import br.ufpi.es.ourbook.dados.Livro;
 import br.ufpi.es.ourbook.dados.Usuario;
 import br.ufpi.es.ourbook.controle.ControleLivro;
@@ -12,7 +14,7 @@ public class ControleUsuario {
 
     public Usuario carregarUsuario(String email){
         Usuario usuario = new Usuario();
-        Livro[] livros;
+        List<Livro> livros;
 
         if (email.equals("lucasbrito@gmail.com")){
             usuario.setEmail("lucasbrito@gmail.com");
@@ -20,7 +22,7 @@ public class ControleUsuario {
             usuario.setEndereco("Rua blá blá blá");
             usuario.setSenha("1234");
             usuario.setSexo("Masculino");
-            usuario.setLivros(livros = new ControleLivro().listarLivros("lucasbrito@gmail.com"));
+            new ControleLivro().startaLivros(usuario);
         }
         else if (email.equals("luciaemilia@gmail.com")){
             usuario.setEmail("luciaemilia@gmail.com");
@@ -28,7 +30,7 @@ public class ControleUsuario {
             usuario.setEndereco("Rua blá blá blá");
             usuario.setSenha("456");
             usuario.setSexo("Femenino");
-            usuario.setLivros(livros = new ControleLivro().listarLivros("luciaemilia@gmail.com"));
+            new ControleLivro().startaLivros(usuario);
         }
         else if (email.equals("paulaandrade@gmail.com")){
             usuario.setEmail("paulaandrade@gmail.com");
@@ -36,7 +38,7 @@ public class ControleUsuario {
             usuario.setEndereco("Rua blá blá blá");
             usuario.setSenha("567");
             usuario.setSexo("femenino");
-            usuario.setLivros(livros = new ControleLivro().listarLivros("paulaandrade@gmail.com"));
+            new ControleLivro().startaLivros(usuario);
         }
         else if (email.equals("marcio@gmail.com")){
             usuario.setEmail("marcio@gmail.com");
@@ -44,7 +46,7 @@ public class ControleUsuario {
             usuario.setEndereco("Rua blá blá blá");
             usuario.setSenha("789");
             usuario.setSexo("Masculino");
-            usuario.setLivros(livros = new ControleLivro().listarLivros("marcio@gmail.com"));
+            new ControleLivro().startaLivros(usuario);
         }
         else{
             String msg = "Usuário não existe !";

@@ -17,9 +17,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bem Vindo, Nome"
-            android:textSize="16sp"/>
-
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/textView"/>
 
 
     </LinearLayout>
@@ -48,14 +48,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:text="Configurações"
-        android:onClick="configuracoes"
-        />
+        android:text="Sobre"
+        android:onClick="sobre"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:text="Sobre"
-        android:onClick="sobre"/>
+        android:text="Logout"
+        android:onClick="logout"/>
 
 </LinearLayout>

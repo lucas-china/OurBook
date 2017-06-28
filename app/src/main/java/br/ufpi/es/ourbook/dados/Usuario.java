@@ -1,18 +1,22 @@
 package br.ufpi.es.ourbook.dados;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Lucas Brito on 22/06/2017.
  */
 
-public class Usuario {
+public class Usuario implements Serializable{
 
+    private int id;
     private String nome;
     private String email;
     private String senha;
     private String sexo;
     private String endereco;
-    private Livro[] livros;
-
+    private List<Livro> livros = new ArrayList<>();
 
 
     public String getNome() {
@@ -55,11 +59,23 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Livro[] getLivros() {
+    public List<Livro> getLivros() {
         return livros;
     }
 
-    public void setLivros(Livro[] livros) {
+    public void setLivros(List<Livro> livros) {
         this.livros = livros;
+    }
+
+    public void adicionarLivro(Livro livro){
+        livros.add(livro);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

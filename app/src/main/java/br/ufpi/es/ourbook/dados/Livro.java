@@ -1,10 +1,14 @@
 package br.ufpi.es.ourbook.dados;
 
+import java.io.Serializable;
+
 /**
  * Created by Lucas Brito on 25/06/2017.
  */
 
-public class Livro {
+public class Livro  implements Serializable{
+
+    private int id;
     private String titulo;
     private String autor;
     private String editora;
@@ -13,9 +17,17 @@ public class Livro {
     private boolean disponivel;
 
     public Livro(String titulo, String autor, String genero){
+
         this.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
+    }
+
+    @Override
+    public String toString(){
+        return "Titulo: " + titulo + "\n"+
+                "Autor: " + autor + "\n"+
+                "Genero: " + genero + "\n";
     }
 
     public String getTitulo() {
@@ -64,5 +76,13 @@ public class Livro {
 
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

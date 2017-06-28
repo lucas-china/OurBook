@@ -30,51 +30,17 @@ public class LoginActivity extends AppCompatActivity {
         String senhaInformada = senha.getText().toString();
 
         try{
-            Usuario usuario = new ControleUsuario().carregarUsuario("lucasbrito@gmail.com");
-            Usuario usuario1 = new ControleUsuario().carregarUsuario("luciaemilia@gmail.com");
-            Usuario usuario2 = new ControleUsuario().carregarUsuario("paulaandrade@gmail.com");
-            Usuario usuario3 = new ControleUsuario().carregarUsuario("marcio@gmail.com");
-
+            Usuario usuario = new ControleUsuario().carregarUsuario(usuarioInformado);
 
             if(usuario != null){
                 if (usuarioInformado.equals(usuario.getEmail()) && senhaInformada.equals(usuario.getSenha())){
-                    Bundle budle = new Bundle();
-                    budle.putString("nomeUsuario",usuario.getNome());
-                    budle.putString("emailUsuario",usuario.getEmail());
+                    //Bundle budle = new Bundle();
+                    //budle.putString("nomeUsuario",usuario.getNome());
+                    //budle.putString("emailUsuario",usuario.getEmail());
 
                     Intent intent = new Intent(this, TelaPrincipal.class);
-                    intent.putExtras(budle);
-
-                    startActivity(intent);
-                }
-                else if(usuarioInformado.equals(usuario1.getEmail()) && senhaInformada.equals(usuario1.getSenha())){
-                    Bundle budle = new Bundle();
-                    budle.putString("nomeUsuario",usuario1.getNome());
-                    budle.putString("emailUsuario",usuario1.getEmail());
-
-                    Intent intent = new Intent(this, TelaPrincipal.class);
-                    intent.putExtras(budle);
-
-                    startActivity(intent);
-                }
-                else if(usuarioInformado.equals(usuario2.getEmail()) && senhaInformada.equals(usuario2.getSenha())){
-                    Bundle budle = new Bundle();
-                    budle.putString("nomeUsuario",usuario2.getNome());
-                    budle.putString("emailUsuario",usuario2.getEmail());
-
-                    Intent intent = new Intent(this, TelaPrincipal.class);
-                    intent.putExtras(budle);
-
-                    startActivity(intent);
-                }
-                else if(usuarioInformado.equals(usuario3.getEmail()) && senhaInformada.equals(usuario3.getSenha())){
-                    Bundle budle = new Bundle();
-                    budle.putString("nomeUsuario",usuario3.getNome());
-                    budle.putString("emailUsuario",usuario3.getEmail());
-
-                    Intent intent = new Intent(this, TelaPrincipal.class);
-                    intent.putExtras(budle);
-
+                    intent.putExtra("usuario",usuario);
+                    limpaCamposEntrada();
                     startActivity(intent);
                 }
                 else {
