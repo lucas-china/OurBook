@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void esqueciSenha(View view){
-        String mensagem = "Método não implementado";
+        String mensagem = "Método não implementado ainda";
         Toast toast = Toast.makeText(this, mensagem, Toast.LENGTH_LONG);
         toast.show();
     }

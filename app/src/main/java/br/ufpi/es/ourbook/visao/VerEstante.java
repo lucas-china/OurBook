@@ -23,20 +23,20 @@ public class VerEstante extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_estante);
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        ListView livrosArray = (ListView) findViewById(R.id.listView);
 
         usuario = (Usuario) getIntent().getSerializableExtra("usuario");
 
-        this.listarLivros(listView);
+        this.listarLivros(livrosArray);
 
     }
 
-    public void listarLivros(ListView listView){
+    public void listarLivros(ListView livrosArray){
         List<Livro> livros = new ControleLivro().listarLivros(usuario);
         if(livros != null){
             ArrayAdapter<Livro> adapter = new ArrayAdapter<Livro>(this,android.R.layout.simple_list_item_1,livros);
 
-            listView.setAdapter(adapter);
+            livrosArray.setAdapter(adapter);
         }
 
     }

@@ -3,7 +3,7 @@ package br.ufpi.es.ourbook.dados;
 import java.io.Serializable;
 
 /**
- * Created by Lucas Brito on 25/06/2017 _.
+ * Created by Lucas Brito on 25/06/2017.
  */
 
 public class Livro  implements Serializable{

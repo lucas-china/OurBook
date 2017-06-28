@@ -7,7 +7,7 @@ import br.ufpi.es.ourbook.dados.Livro;
 import br.ufpi.es.ourbook.dados.Usuario;
 
 /**
- * Created by Lucas Brito on 25/06/2017 _.
+ * Created by Lucas Brito on 25/06/2017.
  */
 
 public class ControleLivro {

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="br.ufpi.es.ourbook.visao.VerEstante">
 
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

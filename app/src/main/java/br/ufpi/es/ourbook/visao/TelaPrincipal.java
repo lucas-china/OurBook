@@ -32,7 +32,7 @@ public class TelaPrincipal extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        String msg = "Usuário " + usuario.getNome().toString() + " já logado !";
+        String msg = "Usuário " + usuario.getNome().toString() + " já está logado !";
         Toast toast = Toast.makeText(this,msg,Toast.LENGTH_SHORT);
         toast.show();
     }

@@ -46,7 +46,7 @@ public class TelaCadastrar extends AppCompatActivity {
         novoLivro.setEditora(editoraLivro);
         novoLivro.setDisponivel(true);
 
-        String msg = "Livro Adicionado";
+        String msg = "Livro Adicionado com Sucesso";
         Toast toast = Toast.makeText(this,msg,Toast.LENGTH_SHORT);
         toast.show();
 
