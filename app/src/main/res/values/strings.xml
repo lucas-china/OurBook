@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OurBook</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="logar">Logar</string>
+    <string name="esqueciSenha">Esqueci a senha</string>
+</resources>

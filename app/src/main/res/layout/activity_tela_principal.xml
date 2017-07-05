@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="br.ufpi.es.ourbook.visao.TelaPrincipal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/textView"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Ver Estante"
+        android:onClick="verEstante"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Cadastrar Livros"
+        android:onClick="cadastarLivro"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Buscar Livro"
+        android:onClick="buscarLivro"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Sobre" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Logout"
+        android:onClick="logout"/>
+
+</LinearLayout>
