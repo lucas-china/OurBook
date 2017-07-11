@@ -1,14 +1,13 @@
 package br.ufpi.es.ourbook.visao;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import br.ufpi.es.ourbook.R;
-import br.ufpi.es.ourbook.controle.ControleLivro;
 import br.ufpi.es.ourbook.dados.Usuario;
 
 public class TelaPrincipal extends AppCompatActivity {
@@ -53,10 +52,10 @@ public class TelaPrincipal extends AppCompatActivity {
 
     public void buscarLivro(View view){
         // chama a tela cadastar livro
-        Intent intentCadastarLivro = new Intent(this,ListarLivrosActivity.class);
-        intentCadastarLivro.putExtra("usuario",usuario);
-        startActivity(intentCadastarLivro);
-    }
+        Intent intentBuscarLivro = new Intent(this,BuscarLivrosActivity.class);
+        intentBuscarLivro.putExtra("usuario",usuario);
+        startActivity(intentBuscarLivro);
+}
 
     public void logout(View view){
         finish();

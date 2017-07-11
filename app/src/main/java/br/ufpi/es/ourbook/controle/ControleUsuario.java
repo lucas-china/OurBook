@@ -4,7 +4,6 @@ import java.util.List;
 
 import br.ufpi.es.ourbook.dados.Livro;
 import br.ufpi.es.ourbook.dados.Usuario;
-import br.ufpi.es.ourbook.controle.ControleLivro;
 
 /**
  * Created by Lucas Brito on 23/06/2017.

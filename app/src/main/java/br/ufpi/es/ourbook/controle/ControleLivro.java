@@ -5,11 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import br.ufpi.es.ourbook.dados.Livro;
-import br.ufpi.es.ourbook.dados.Usuario;
 import br.ufpi.es.ourbook.modelo.LivrosBanco;
 
 /**
@@ -66,6 +61,20 @@ public class ControleLivro {
         Cursor cursor;
         String[] campos =  {banco.ID,banco.TITULO,banco.AUTOR,banco.EDITORA};
         String where = LivrosBanco.ID + "=" + id;
+        db = banco.getReadableDatabase();
+        cursor = db.query(LivrosBanco.TABELA,campos,where, null, null, null, null, null);
+
+        if(cursor!=null){
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
+    }
+
+    public Cursor carregaDadoByTitulo(String titulo){
+        Cursor cursor;
+        String[] campos =  {banco.ID,banco.TITULO,banco.AUTOR,banco.EDITORA};
+        String where = LivrosBanco.TITULO + " LIKE '%" + titulo + "%'";
         db = banco.getReadableDatabase();
         cursor = db.query(LivrosBanco.TABELA,campos,where, null, null, null, null, null);
 

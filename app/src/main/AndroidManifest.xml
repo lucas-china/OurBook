@@ -19,7 +19,8 @@
         <activity android:name=".visao.TelaPrincipal" />
         <activity android:name=".visao.CadastrarLivrosActivity" />
         <activity android:name=".visao.ListarLivrosActivity" />
-        <activity android:name=".visao.AlteraLivrosActivity"></activity>
+        <activity android:name=".visao.AlteraLivrosActivity" />
+        <activity android:name=".visao.BuscarLivrosActivity"></activity>
     </application>
 
 </manifest>
